@@ -29,3 +29,11 @@ The purpose of this script is to:
 
 ![Screenshot of libraries](https://github.com/DanielCarns/openmp-xcode-config/blob/master/adding-library.png?raw=true)
 
+# Step 4 - Run Provided Main.c
+- Run the main.c provided in the repo and you should see output similar to this:
+```
+Rank:  0  of  4
+Rank:  2  of  4
+Rank:  3  of  4
+Rank:  1  of  4
+```

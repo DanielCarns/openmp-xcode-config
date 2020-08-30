@@ -20,10 +20,12 @@ The purpose of this script is to:
 - Make sure the versions specified for LLVM are up to date for HEADER_SEARCH_PATHS and LIBRARY_SEARCH_PATHS
   - You can check the version installed by running: ```ls /usr/local/Cellar/llvm```
 - Go to Project > Info > Under "Configurations" select Config for debug and release
+
 ![Screenshot of configurations](https://github.com/DanielCarns/openmp-xcode-config/blob/master/adding-config.png?raw=true)
 
 # Step 3 - Add libomp to Embedded Binaries
 - Targets > Build Phases > Link with binaries and libraries
 - Select libomp.dylib which the script placed in your project directory
+
 ![Screenshot of libraries](https://github.com/DanielCarns/openmp-xcode-config/blob/master/adding-library.png?raw=true)
 

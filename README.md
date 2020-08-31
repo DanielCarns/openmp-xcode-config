@@ -17,8 +17,8 @@ The purpose of this script is to:
 # Step 2 - Add Build Configuration File
 - Place a copy of the included Config.xcconfig into your project
 - File > Add files to "Your Project" > Config.xcconfig
-- Make sure the versions specified for LLVM are up to date for HEADER_SEARCH_PATHS and LIBRARY_SEARCH_PATHS
-  - You can check the version installed by running: ```ls /usr/local/Cellar/llvm```
+- Make sure the versions specified for LLVM are up to date for HEADER_SEARCH_PATHS and LIBRARY_SEARCH_PATHS (inside of the Config.xcconfig)
+  - You can check the version installed by running: ```ls /usr/local/Cellar/llvm``` this will show the version you have installed, the config versions should match this
 - Go to Project > Info > Under "Configurations" select Config for debug and release
 
 ![Screenshot of configurations](https://github.com/DanielCarns/openmp-xcode-config/blob/master/adding-config.png?raw=true)

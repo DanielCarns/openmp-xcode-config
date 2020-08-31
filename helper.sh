@@ -36,9 +36,9 @@ function set_paths {
 # Copy libiomp to the project folder
 function copy_dylib_to_project {
     cd "$libomp_path"
-    printf "${GREEN} libiomp copied to project"
     cp -v libomp.dylib "$PROJECT_PATH"
     cd "$PROJECT_PATH"
+    printf "${GREEN} libiomp copied to project"
 }
 
 function check_if_llvm_installed {
@@ -63,6 +63,6 @@ function check_if_llvm_installed {
     fi
 }
 
-set_paths
 check_if_llvm_installed
+set_paths
 copy_dylib_to_project

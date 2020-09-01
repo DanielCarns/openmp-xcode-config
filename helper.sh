@@ -1,5 +1,4 @@
 #!/bin/bash
-
 clear
 
 #Colors
@@ -13,6 +12,7 @@ libomp_path='' #path to where libiomp.dylib resides
 llvm_version=''
 llvm_path='/usr/local/Cellar/llvm'
 
+# Show prompt to confirm whether or not they want to install llvm
 confirm_llvm_install() {
     # call with a prompt string or use a default
     read -r -p "${1:-LLVM is not currently installed with brew, would you like to install it now? (y/n)} " response
@@ -41,6 +41,7 @@ function copy_dylib_to_project {
     printf "${GREEN} libiomp copied to project"
 }
 
+# Check if llvm is installed and run a prompt for install if it isn't
 function check_if_llvm_installed {
     cd "/"
 
@@ -56,7 +57,6 @@ function check_if_llvm_installed {
     notInstalled="Not installed"
     notInstalledSearchRes=${INFO_OUTPUT#*notInstalled}
 
-    #if [ "$notInstalledSearchRes" == "$notInstalled" ]; then
     if [[ "$notInstalledSearchRes" == *"$notInstalled"* ]]; then
         # This will ask the user to confirm, if they do then it'll run brew install llvm
         confirm_llvm_install && brew install llvm
